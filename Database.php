@@ -132,66 +132,7 @@ Abstract class Database extends Common{
     {
         return $this->_dbase->lastInsertId();
     }
-/*
-    public function results()
-    {
-        return $this->_results;
-    }
 	
-	private function _class_query($class)
-	{
-		$this->_query->setFetchMode(PDO::FETCH_CLASS, $class);//FETCH_OBJ , FETCH_NUM, FETCH_ASSOC, FETCH_CLASS,FETCH_FUNC
-
-        $this->_results = $this->_query->fetchAll();
-
-		return $this;
-	}
-
-    private function _func_query($class)
-    {
-        $this->_query->setFetchMode(PDO::FETCH_FUNC, $class);//FETCH_OBJ , FETCH_NUM, FETCH_ASSOC, FETCH_CLASS,FETCH_FUNC
-
-        $this->_results = $this->_query->fetchAll();
-
-        return $this;
-    }
-
-    public function get_all()
-    {
-        $args = func_get_args();
-
-        $sql = ($args)? array_shift($args) : "";
-
-        $class =  ($args)? array_shift($args) : ""; //array_key_exists(1,func_get_args())? func_get_arg(1) : '';
-
-        return $this->query($sql, $class);
-    }
-	
-	public function query($sql, $params = array())
-	{
-        $this->_results= array();
-
-        try{
-
-            $this->_query = $this->_dbase->prepare($sql);
-
-            $this->_query->execute($params);
-
-            //if(isset($class) && $class_query) return $this->_class_query($class);
-
-           // if(!$class_query) return $this->_func_query($class);
-
-            //$this->_results = $this->_query->fetchAll(PDO::$this->fetch_mode); //FETCH_OBJ , FETCH_NUM, FETCH_ASSOC, FETCH_CLASS,''
-
-            return $this;
-
-        }catch(Exception $e){
-
-            trigger_error($e->getMessage(),E_USER_ERROR);
-        }
-
-	}
-*/
     /**
      *no body can clone me now
      * because am a private guy
