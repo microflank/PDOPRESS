@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JOREXZOFLANK
- * Date: 5/11/15
- * Time: 7:39 AM
- */
 
-namespace contracts;
+namespace PDOpress\Libraries\Models\Contracts;
 
 interface IDatabase {
 
@@ -121,4 +115,4 @@ interface IDatabase {
      */
     public function dropdown($field_key, $field_value);
 
-} 
+}
